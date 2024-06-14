@@ -4,6 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run deploy && npm run delegate && npm run propose && npm run vote && npm run execute",
+    "deploy": "npx hardhat run ./scripts/deploy.js --network localhost",
+    "delegate": "npx hardhat run ./scripts/delegate.js --network localhost",
+    "propose": "npx hardhat run ./scripts/propose.js --network localhost",
+    "vote": "npx hardhat run ./scripts/vote.js --network localhost",
+    "execute": "npx hardhat run ./scripts/execute.js --network localhost",
+    "start:sepolia": "npm run deploy:sepolia && npm run delegate:sepolia && npm run propose:sepolia && npm run vote:sepolia && npm run execute:sepolia",
+    "deploy:sepolia": "npx hardhat run ./scripts/deploy.js --network sepolia",
+    "delegate:sepolia": "npx hardhat run ./scripts/delegate.js --network sepolia",
+    "propose:sepolia": "npx hardhat run ./scripts/propose.js --network sepolia",
+    "vote:sepolia": "npx hardhat run ./scripts/vote.js --network sepolia",
+    "execute:sepolia": "npx hardhat run ./scripts/execute.js --network sepolia",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",
+    "dotenv": "^16.4.5",
     "hardhat": "^2.12.6"
   },
   "devDependencies": {
