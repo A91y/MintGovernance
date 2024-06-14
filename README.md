@@ -9,5 +9,17 @@ npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat run scripts/deploy.js
+npm run start
+```
+
+For sepolia network:
+```shell
+npm run start:sepolia
+```
+
+## Required `.env` from sepolia
+
+```
+TEST_PRIVATE_KEY=
+ALCHEMY_SEPOLIA_URL=
 ```
